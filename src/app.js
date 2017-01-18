@@ -13,17 +13,19 @@ app.use(serveStatic('public'));
 // Create story object and helper functions
 const story = [{ text: "There once was a big, bad wolf." }];
 
-const getNode = nodeId => story[nodeId];
+const getSentence = id => story[id];
 
-const getChildId = (parentId, compass) => getNode(parentId)[compass];
+const getChildId = (parentId, compass) => getSentence(parentId)[compass];
 
-const createNode = ({ text, parentId, compass }) => {
-  let parentNode = getNode(parentId),
-      newNodeIndex = story.length,
-      newNode = { text };
+const setChildId = (parentId, compass, childId) => getSentence(parentId)[compass] = childId;
 
-  nodes.push(newNode);
-  parentNode[compass] = newNodeIndex;
+const addSentence = ({ text, parentId, compass }) => {
+  let parentSentence = getSentence(parentId),
+      newSentenceId = story.length,
+      newSentence = { text };
+
+  story.push(newSentence);
+  setChildId(parentId, compass, newSentenceId);
 };
 
 // Configure routes

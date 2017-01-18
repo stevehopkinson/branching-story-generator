@@ -48,7 +48,12 @@ const buildChildContext = (parentId, compass) => {
 };
 
 // Configure routes
-app.get('/', (req, res) => res.render('index', buildContext(0)));
+app.get('/:id', (req, res) => {
+  let context = buildContext(req.params.id);
+  res.render('index', context);
+});
+
+app.get('/', (req, res) => res.redirect('/0'));
 
 app.post('/', (req, res) => {
   addSentence(req.body);

@@ -28,8 +28,32 @@ const addSentence = ({ text, parentId, compass }) => {
   setChildId(parentId, compass, newSentenceId);
 };
 
+// Create helper functions to build context objects for handlebars
+const buildContext = (sentenceId) => {
+  let sentence = getSentence(sentenceId);
+  let context = { text: sentence.text };
+  ['n', 'e', 's', 'w'].forEach(
+    (compass) => context[compass] = buildChildContext(sentenceId, compass)
+  );
+  return context;
+};
+
+const buildChildContext = (parentId, compass) => {
+  let child = { parentId, compass };
+  if (getSentence(parentId).hasOwnProperty(compass)) {
+    child.id = getChildId(parentId, compass);
+    child.text = getSentence(child.id).text;
+  }
+  return child;
+};
+
 // Configure routes
-app.get('/', (req, res) => res.render('index', story[0]));
+app.get('/', (req, res) => res.render('index', buildContext(0)));
+
+app.post('/', (req, res) => {
+  addSentence(req.body);
+  res.redirect(`/${req.body.parentId}`);
+});
 
 // Export app
 module.exports = app;

@@ -1,3 +1,5 @@
+# Multi-path story generator: design brief
+
 Please write a web application which enables the user to write "multi-path stories." A multi-path story is composed of sentences. After each sentence, there are up to four possible next sentences, and after each of those, another four possible next sentences, and so on.
 
 Here's a short screencast which illustrates the application:
@@ -15,3 +17,5 @@ If you're not sure about anything, please ask before writing any code.
 Include instructions for running the application. It will be run on a UNIX-like OS.
 
 Afterwards, write a short report on your approach to designing and implementing this application, the implications of any shortcuts you took, and a list of the things you think this test is testing. This report should be suitable for presentation to one of our clients. Use a simple text based markup language like Textile or Markdown.
+
+Send all files in a single archive, and tell me how long you spent on the test.

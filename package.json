@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/stevehopkinson/multi-path-story/issues"
   },
-  "homepage": "https://github.com/stevehopkinson/multi-path-story#readme"
+  "homepage": "https://github.com/stevehopkinson/multi-path-story#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }

@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/stevehopkinson/multi-path-story#readme",
   "dependencies": {
+    "body-parser": "^1.16.0",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0"
   }

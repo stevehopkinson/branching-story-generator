@@ -1,4 +1,4 @@
-# Multi-path story generator: design report
+# Branching story generator: design report
 
 ## Approach to design
 

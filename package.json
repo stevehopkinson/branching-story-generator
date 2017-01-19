@@ -1,7 +1,7 @@
 {
-  "name": "multi-path-story",
+  "name": "branching-story-generator",
   "version": "1.0.0",
-  "description": "A simple web application that allows users to generate multi-path stories",
+  "description": "A simple web application that allows users to generate branching stories",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stevehopkinson/multi-path-story.git"
+    "url": "git+https://github.com/stevehopkinson/branching-story-generator.git"
   },
   "author": "Steve Hopkinson",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/stevehopkinson/multi-path-story/issues"
+    "url": "https://github.com/stevehopkinson/branching-story-generator/issues"
   },
-  "homepage": "https://github.com/stevehopkinson/multi-path-story#readme",
+  "homepage": "https://github.com/stevehopkinson/branching-story-generator#readme",
   "dependencies": {
     "body-parser": "^1.16.0",
     "express": "^4.14.0",

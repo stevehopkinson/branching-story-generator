@@ -11,4 +11,4 @@ This app requires [__Node.js v6 or higher__](https://nodejs.org/en/), and was de
 4. Navigate to ```localhost:8000``` to use the app.
 
 ## Report
-[Read a report](./docs/report.md) on the design and implementation decisions made when building this app, the implications of any shortcuts taken, and the abilities that building this app demonstrated.
+[Read a report](./docs/report.md) on the design and implementation decisions made when building this app, the implications of any shortcuts taken, and the skills that building this app demonstrated.
